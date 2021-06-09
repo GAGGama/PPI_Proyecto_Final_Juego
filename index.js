@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT;
 
-app.set('port', process.env.PORT || 3000);
+//app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(path.join(__dirname,'public')));
 
@@ -9,6 +10,9 @@ app.get("/",(req,res)=>{
     res.sendFile(__dirname+"/public/index.html");
 });
 
+app.listen(port, ()=>{
+    console.log(`Example app listen`);
+})
 
 //const server = app.listen(app.get('port'),()=>{
 //    console.log('server on port ',app.get('port'));
