@@ -8,9 +8,9 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(express.static('public'));
 
-//app.listen(3000 || process.env.PORT, ()=>{
- //   console.log(`Example app listen`);
-//})
+app.listen(3000 || process.env.PORT, ()=>{
+    console.log(`Example app listen`);
+})
 
 //const server = app.listen(app.get('port'),()=>{
 //    console.log('server on port ',app.get('port'));
